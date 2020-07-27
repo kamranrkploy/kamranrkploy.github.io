@@ -1,0 +1,189 @@
+html{
+       background:radial-gradient(#187,#001);
+       height: 100%;
+/*    121D33*/
+    }
+
+#container
+{   
+    
+      width: 650px; 
+      height: 480px;
+      background: linear-gradient(#110011,#001100);
+      margin: 145px auto ;
+      padding: 12px;
+      border-radius: 25px;
+      box-shadow: 1px 1px 20px 10px ;   /*we can add color of shadow as well in the end*/
+      position: relative;
+      outline: none;
+}
+
+#score{
+       padding: 10px; 
+       position: absolute;
+       left: 540px;
+       font-size: 25px;
+       outline: none;
+       color: b;
+       font-size: 25px;
+       background-color: lightgreen;
+       border-radius: 30px;
+      }
+
+#correct{
+    position: absolute;
+    left: 285px;
+    padding: 15px 10px;
+    font-size: 25px;
+    display: none;
+    background-color: lightgreen;
+    border-radius: 18px;
+/*    outline: none;*/
+}
+
+#wrong{
+    position: absolute;
+    left: 285px;
+    padding: 15px 10px;
+    font-size: 25px;
+    display: none;
+    background-color: lightcoral;
+    border-radius: 18px;
+/*    outline: none;*/
+      }
+
+#quest{
+    
+        color: aliceblue;
+        width: 450px;    
+        height: 100px;
+        margin: 70px auto 10px auto ;
+        background-color: #512139;
+        box-shadow: 0px 5px 10px 6px #513644;
+        text-align: center;
+        font-size: 65px;
+        font-family:cursive,sans-serif,monospace;
+    }
+
+#Help{
+    
+        width: 450px;
+        height: 50px;
+        text-align: center;
+        line-height: 45px;
+        margin: 30px auto;
+        background-color: #5136;
+        box-shadow: 0px 5px 10px 3px;
+        font-family: cursive;
+        color: aliceblue;
+}
+
+#Answers{
+        width: 450px;
+        height: 100px;
+        margin: 5px auto;
+        outline: none;
+        
+    
+}
+
+.box{
+     width: 90px;
+     height: 90px;
+     float:left;
+     font-size: 20px;
+     margin-right: 30px;
+     background-color: #5165;
+     border-radius: 21px;
+     text-align: center;
+     line-height: 85px;
+     font-size: 30px;
+     font-family:sans-serif;
+     cursor:pointer;
+     box-shadow: 0px 3px 6px 2px;
+     position: relative;
+     transition: all 0.2s;
+/*    outline: none;*/
+}
+
+#box4{
+        margin-right:  0px ;
+        outline: none;
+}
+
+.box:hover{
+     background-color:#5170;
+     color:snow;
+     font-size: 25px;  
+}
+
+.box:active{ 
+/*            height: 98px;*/
+              font-size: 30px;
+              transform: scale(1.2,1.2);
+              color: lawngreen;
+              box-shadow: 0px 3px 6px 2p  darkgreen;
+}
+
+#OperateGame{
+        width: 105px;
+        height: 20px;
+        padding: 10px;
+        font-size: 15px;
+        text-align: center;
+        margin: 30px 265px;
+        border-radius: 30px;
+        background:radial-gradient(white,grey,black);
+        box-shadow: 0px 1px 1px 1px black;
+        cursor: pointer;
+        transition: all 0.2s;
+        outline: none;
+}
+
+#OperateGame:hover
+{
+    font-size: 17px;   
+}
+#OperateGame:active
+{
+             font-size: 19px;
+             transform: scale(1.2,1.2);
+             color: #753014;
+             box-shadow: 0px 2px 2px 2px black;
+}
+#YourTime
+{
+    
+          width: 180px;
+          position: absolute;
+          padding: 10px;
+          left: 450px;
+          top: 422px;
+          font-size: 17px;
+          background-color: #032320;
+          border-radius: 6px;
+          color: bisque;
+          box-shadow: 0px 3px 2px 1px #033218;
+          display: none;
+    
+}
+
+#GameOver
+{
+    
+              height: 200px;
+              width: 500px;
+              position: absolute;
+              z-index: 2;
+              top: 120px;
+              left: 85px;
+              text-align: center;
+              background: radial-gradient(grey,black);
+              color:azure;
+              text-transform: uppercase;
+              font-size: 2.5em;
+              border-radius: 10px;
+              display: none;
+}
+
+
