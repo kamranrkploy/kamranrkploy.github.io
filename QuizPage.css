@@ -10,8 +10,8 @@ html{
       width: 650px; 
       height: 480px;
       background: radial-gradient(rgb(92, 27, 27) ,black);
-      margin: 145px auto ;
-      margin-top: auto;
+      margin: 14px auto ;
+      margin-top: 5px;
       padding: 12px;
       border-radius: 25px;
       box-shadow: 1px 1px 20px 10px ;   /*we can add color of shadow as well in the end*/
