@@ -9,8 +9,9 @@ html{
     
       width: 650px; 
       height: 480px;
-      background: linear-gradient(#110011,#001100);
+      background: radial-gradient(rgb(92, 27, 27) ,black);
       margin: 145px auto ;
+      margin-top: auto;
       padding: 12px;
       border-radius: 25px;
       box-shadow: 1px 1px 20px 10px ;   /*we can add color of shadow as well in the end*/
@@ -22,21 +23,22 @@ html{
        padding: 10px; 
        position: absolute;
        left: 540px;
-       font-size: 25px;
+       font-size: 20px;
+       padding: 15px;
        outline: none;
-       color: b;
-       font-size: 25px;
-       background-color: lightgreen;
-       border-radius: 30px;
+       color: bisque;
+       background:radial-gradient(#032320,black);
+       border-radius: 25%;
       }
 
 #correct{
+    color: goldenrod;
     position: absolute;
     left: 285px;
     padding: 15px 10px;
     font-size: 25px;
     display: none;
-    background-color: lightgreen;
+    background:radial-gradient(#032320,black);
     border-radius: 18px;
 /*    outline: none;*/
 }
@@ -58,23 +60,42 @@ html{
         width: 450px;    
         height: 100px;
         margin: 70px auto 10px auto ;
-        background-color: #512139;
-        box-shadow: 0px 5px 10px 6px #513644;
+        background:radial-gradient(#032320,black);
+        box-shadow: 4px 4px 3px black;
         text-align: center;
+        line-height: 6rem;
         font-size: 65px;
         font-family:cursive,sans-serif,monospace;
     }
 
-#Help{
+    h1{
+        font-family: 'billabongregular';
+        text-align: center;
+        font-size: 12rem;
+        font-weight: 120;
+        margin: 2rem 0;
+        letter-spacing: -1px;
+    }
     
+    @font-face {
+        font-family: 'billabongregular';
+        src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot");
+        src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot?#iefix") format('embedded-opentype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.woff") format('woff'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.ttf") format('truetype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.svg#billabongregular") format('svg');
+        font-weight: normal;
+        font-style: normal;
+       }
+
+#Help{
+        font-size: 25px;      
         width: 450px;
         height: 50px;
         text-align: center;
-        line-height: 45px;
+        line-height: 55px;
         margin: 30px auto;
-        background-color: #5136;
-        box-shadow: 0px 5px 10px 3px;
-        font-family: cursive;
+        background:radial-gradient(#032320,black);
+        box-shadow: 0px 5px 5px  black;
+        font-family: 'billabongregular';
+        word-spacing: 1rem;
         color: aliceblue;
 }
 
@@ -88,19 +109,20 @@ html{
 }
 
 .box{
+     color: snow;
      width: 90px;
      height: 90px;
      float:left;
      font-size: 20px;
      margin-right: 30px;
-     background-color: #5165;
+     background:radial-gradient(#032320,black);
      border-radius: 21px;
      text-align: center;
      line-height: 85px;
      font-size: 30px;
      font-family:sans-serif;
      cursor:pointer;
-     box-shadow: 0px 3px 6px 2px;
+     box-shadow: 0px 3px 6px 2px black;
      position: relative;
      transition: all 0.2s;
 /*    outline: none;*/
@@ -113,7 +135,8 @@ html{
 
 .box:hover{
      background-color:#5170;
-     color:snow;
+     color: goldenrod;
+     box-shadow: 2px 2px 2px goldenrod;
      font-size: 25px;  
 }
 
@@ -121,8 +144,8 @@ html{
 /*            height: 98px;*/
               font-size: 30px;
               transform: scale(1.2,1.2);
-              color: lawngreen;
-              box-shadow: 0px 3px 6px 2p  darkgreen;
+              color: goldenrod;
+              box-shadow: 0px 3px 6px 2px  goldenrod;
 }
 
 #OperateGame{
@@ -131,9 +154,11 @@ html{
         padding: 10px;
         font-size: 15px;
         text-align: center;
+        color: bisque;
         margin: 30px 265px;
         border-radius: 30px;
-        background:radial-gradient(white,grey,black);
+        /* background:radial-gradient(white,grey,black); */
+        background:radial-gradient(#032320,black);
         box-shadow: 0px 1px 1px 1px black;
         cursor: pointer;
         transition: all 0.2s;
@@ -143,12 +168,13 @@ html{
 #OperateGame:hover
 {
     font-size: 17px;   
+    color: goldenrod;
 }
 #OperateGame:active
 {
              font-size: 19px;
              transform: scale(1.2,1.2);
-             color: #753014;
+             color: bisque;
              box-shadow: 0px 2px 2px 2px black;
 }
 #YourTime
@@ -170,7 +196,7 @@ html{
 
 #GameOver
 {
-    
+              /* font-family: 'billabongregular';  */
               height: 200px;
               width: 500px;
               position: absolute;
@@ -178,7 +204,7 @@ html{
               top: 120px;
               left: 85px;
               text-align: center;
-              background: radial-gradient(grey,black);
+              background: radial-gradient(rgb(3, 63, 55),rgb(0, 9, 34));
               color:azure;
               text-transform: uppercase;
               font-size: 2.5em;
