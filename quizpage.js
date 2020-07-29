@@ -3,6 +3,8 @@
  var timeleft;
  var action;
  var RytAns;
+ var RytInc;
+ var WrgInc;
     document.getElementById("OperateGame").onclick=function()
     {
         if(playing == true)
@@ -12,11 +14,13 @@
            {   
              playing = true;
              score = 0;
+             RytInc = 0;
+             WrgInc = 0;
              document.getElementById("scorevalue").innerHTML = score;
              document.getElementById("OperateGame").innerHTML = "<b> Reset Quiz </b>";
              hide("GameOver");
              show("YourTime");
-             timeleft = 60;
+             timeleft = 6;
              document.getElementById("ReduceTime").innerHTML=timeleft;
              StartCountdown();
              GenerateQA();
@@ -29,14 +33,19 @@ for(i=1; i<5; i++){
     { 
         if(this.innerHTML == RytAns){  
             score++;
+            RytInc++; 
             document.getElementById("scorevalue").innerHTML= score;
             hide("wrong");
             show("correct");
             setTimeout(function(){hide("correct");}, 1000);
             GenerateQA();
         }else{
+            score--;
+            WrgInc++;
+            document.getElementById("scorevalue").innerHTML= score;
             hide("correct");
             show("wrong");
+            GenerateQA();
             setTimeout(function(){hide("wrong");},1000);
            
         }
@@ -81,7 +90,7 @@ function show(Id)
    }
 
 function GenerateQA()
-{ 
+{   var Op = 'X';
     var x = 1 + Math.round(9*Math.random());
     var y = 1 + Math.round(9*Math.random());
     RytAns = x*y;
