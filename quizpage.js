@@ -20,7 +20,7 @@
              document.getElementById("OperateGame").innerHTML = "<b> Reset Quiz </b>";
              hide("GameOver");
              show("YourTime");
-             timeleft = 6;
+             timeleft = 60;
              document.getElementById("ReduceTime").innerHTML=timeleft;
              StartCountdown();
              GenerateQA();
@@ -90,23 +90,47 @@ function show(Id)
    }
 
 function GenerateQA()
-{   var Op = 'X';
+{   var Op = ['X','+','-','÷'];
     var x = 1 + Math.round(9*Math.random());
     var y = 1 + Math.round(9*Math.random());
-    RytAns = x*y;
+                var ChooseOp = Math.round(Math.random()*Op.length);
+                    if(ChooseOp == 0){
+                       Op= Op[0];
+                       RytAns = x*y;
+                }else if(ChooseOp == 1){
+                       Op = Op[1];
+                       RytAns = x+y;
+                }else if(ChooseOp == 2){
+                       Op = Op[2];
+                       RytAns = x-y;
+                }else { 
+                       Op = Op[3];
+                       RytAns = (x/y).toFixed(2);
+                    }
+
+    console.log(ChooseOp);
     var RytPos = 1 + Math.round(3*Math.random());
-    document.getElementById("quest").innerHTML = x + "X" + y;
-    document.getElementById("box"+RytPos).innerHTML = RytAns;
+            document.getElementById("quest").innerHTML = x +  Op + y;
+            document.getElementById("box"+RytPos).innerHTML = RytAns;
     
        var answers=[RytAns];
-    for(i=1 ; i<5 ; i++)
-    { if(i != RytPos)
-         { 
-          do{
-              var WrongAns = (1 + Math.round(9*Math.random()))*(1 + Math.round(9*Math.random()));
+        for(i=1 ; i<5 ; i++)
+            { if(i != RytPos)
+                { 
+                 do{ var WrongAns; 
+                        if(ChooseOp ==0){
+                                WrongAns = (1 + Math.round(9*Math.random()))*(1 + Math.round(9*Math.random()));
+                               }else if(ChooseOp == 1){
+                                WrongAns = (1 + Math.round(9*Math.random()))+(1 + Math.round(9*Math.random()));
+                               }else if(ChooseOp == 2){
+                                WrongAns = (1 + Math.round(9*Math.random()))-(1 + Math.round(9*Math.random()));
+                               }else{
+                                WrongAns = ((1 + Math.round(9*Math.random()))/(1 + Math.round(9*Math.random()))).toFixed(2);
+                               }
+
             }while(answers.indexOf(WrongAns)>-1)
-                 document.getElementById("box"+i).innerHTML = WrongAns;
+                  document.getElementById("box"+i).innerHTML = WrongAns;
              answers.push(WrongAns);
-         }
+        }
     }
 }
