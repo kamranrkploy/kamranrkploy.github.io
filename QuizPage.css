@@ -1,8 +1,11 @@
 html{
-       background:radial-gradient(#187,#001);
-       height: 100%;
+       background:linear-gradient(-19deg, #187,#001);
+       min-height: 100vh;
+       min-width: 66vh;
+       /* height: 100%; */
 /*    121D33*/
     }
+
 
 #container
 {   
@@ -17,6 +20,7 @@ html{
       box-shadow: 1px 1px 20px 10px ;   /*we can add color of shadow as well in the end*/
       position: relative;
       outline: none;
+      display: grid;
 }
 
 #score{
