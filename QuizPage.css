@@ -1,8 +1,8 @@
 html{
-       background:linear-gradient(-19deg, #187,#001);
-       min-height: 100vh;
-       min-width: 66vh;
-       /* height: 100%; */
+       background:radial-gradient( #187,#001);
+       /* min-height: 100vh; */
+       /* min-width: 66vh; */
+       height: 100%;
 /*    121D33*/
     }
 
@@ -24,7 +24,7 @@ html{
 }
 
 #score{
-       padding: 10px; 
+       margin-top: 5.2px;
        position: absolute;
        left: 540px;
        font-size: 20px;
